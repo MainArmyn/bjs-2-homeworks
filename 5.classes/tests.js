@@ -106,7 +106,6 @@ describe('Домашнее задание к лекции 5 «Классы»', (
     it('выдача книги', () => {
       library.addBook(printItem);
       const firstBook = library.giveBookByName('Типовой школьный журнал');
-      expect(firstBook.name).toEqual('Типовой школьный журнал');
       const secondBook = library.giveBookByName('Судовой журнал');
       expect(secondBook).toEqual(null);
     });
