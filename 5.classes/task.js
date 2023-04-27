@@ -1,8 +1,8 @@
 class PrintEditionItem {
-    constructor(name,releaseDate,pageCount,state=100,type=null) {
+    constructor(name,releaseDate,pagesCount,state=100,type=null) {
       this.name=name;
       this.releaseDate=releaseDate;
-      this.pageCount=pageCount;
+      this.pagesCount=pagesCount;
       this.state=state;
       this.type=type;
     }
@@ -26,37 +26,37 @@ class PrintEditionItem {
   }
   
   class Magazine extends PrintEditionItem {
-    constructor(name,releaseDate,pageCount,state,type="magazine") {
-      super(name,releaseDate,pageCount,state);
+    constructor(name,releaseDate,pagesCount,state,type="magazine") {
+      super(name,releaseDate,pagesCount,state);
       this.type=type;
     }
   }
   
   class Book extends PrintEditionItem {
-    constructor (author,name,releaseDate,pageCount,state,type="book") {
-      super(name,releaseDate,pageCount,state);
+    constructor (author,name,releaseDate,pagesCount,state,type="book") {
+      super(name,releaseDate,pagesCount,state);
       this.author=author;
       this.type=type;
     }
   }
   
   class NovelBook extends Book {
-    constructor (author,name,releaseDate,pageCount,state,type="novel") {
-      super(author,name,releaseDate,pageCount,state);
+    constructor (author,name,releaseDate,pagesCount,state,type="novel") {
+      super(author,name,releaseDate,pagesCount,state);
       this.type=type;
     }
   }
   
   class FantasticBook extends Book {
-     constructor (author,name,releaseDate,pageCount,state,type="fantastic") {
-      super(author,name,releaseDate,pageCount,state);
+     constructor (author,name,releaseDate,pagesCount,state,type="fantastic") {
+      super(author,name,releaseDate,pagesCount,state);
       this.type=type;
     }
   }
   
   class DetectiveBook extends Book {
-    constructor (author,name,releaseDate,pageCount,state,type="detective") {
-      super(author,name,releaseDate,pageCount,state);
+    constructor (author,name,releaseDate,pagesCount,state,type="detective") {
+      super(author,name,releaseDate,pagesCount,state);
       this.type=type;
     }
   }
@@ -91,11 +91,6 @@ class PrintEditionItem {
       return null;
     }
   }
-  const sherlock = new PrintEditionItem(
-   "Полное собрание повестей и рассказов о Шерлоке Холмсе в одном томе",
-   2019,
-   1008
-  );
   
   class Student {
     constructor(name,marks=[]) {
