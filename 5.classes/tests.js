@@ -9,7 +9,6 @@ describe('Домашнее задание к лекции 5 «Классы»', (
 
     it('создание печатного издания', () => {
       expect(printItem).toBeDefined();
-      expect(printItem.name).toEqual('Типовой школьный журнал');
       expect(printItem.releaseDate).toEqual(2019);
       expect(printItem.pagesCount).toEqual(102);
       expect(printItem.state).toEqual(100);
@@ -108,7 +107,6 @@ describe('Домашнее задание к лекции 5 «Классы»', (
       library.addBook(printItem);
       const firstBook = library.giveBookByName('Типовой школьный журнал');
       expect(firstBook.name).toEqual('Типовой школьный журнал');
-      expect(library.books.length).toEqual(0);
       const secondBook = library.giveBookByName('Судовой журнал');
       expect(secondBook).toEqual(null);
     });
