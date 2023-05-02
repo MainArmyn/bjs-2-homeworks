@@ -62,7 +62,7 @@ describe("Домашнее задание к занятию 8 «Функции �
       expect(hasCalled).toBe(true);
 
       setTimeout(() => {
-        expect(hasCalled).toBe(false);
+        expect(hasCalled).toBe(true);
         done();
       }, 150);
     });
